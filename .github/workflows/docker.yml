@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.dckr_pat_FSJlwQfl0K6u6NrOOFkTHlb0LLc }}
 
       - name: Build Docker image
-        run: docker build -t ${{ secret.ahonanhin }}/quirknotes_frontend:latest -f Dockerfile_frontend .
+        run: docker build -t ${{ secrets.ahonanhin }}/quirknotes_frontend:latest -f Dockerfile_frontend .
 
       - name: Push Docker image to Docker Hub
-        run: docker push ${{ ahonanhin.ahonanhin }}/quirknotes_frontend:latest
+        run: docker push ${{ secrets.ahonanhin }}/quirknotes_frontend:latest
