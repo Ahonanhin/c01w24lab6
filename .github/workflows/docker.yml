@@ -17,7 +17,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           username: ${{ ahonanhin.DOCKERHUB_USERNAME }}
-          password: ${{ dckr_pat_eL6vNWu-uz-yNJcZC7aEalWTGF4.DOCKERHUB_TOKEN }}
+          password: ${{ Lab6Token.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image
         run: docker build -t ${{ ahonanhin.DOCKERHUB_USERNAME }}/quirknotes_frontend:latest -f Dockerfile_frontend .
