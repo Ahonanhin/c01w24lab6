@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile_backend
+      target: backend
+    image: ahonanhin/quirknotes_backend:latest
+    ports:
+      - "4000:4000"
+    environment:
+      - ENV=Docker
+    depends_on:
+      - mongodb
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile_frontend
+      target: frontend
+    environment:
+      - ENV=Docker
+    depends_on:
+      - backend
+    command: npm start
+  mongodb:
+    image: mongo:4.4 bnm,
+    ports:
+      - "27017:27017"
