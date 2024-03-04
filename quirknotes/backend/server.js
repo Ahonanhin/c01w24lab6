@@ -9,7 +9,7 @@ let mongoURL;
 if (process.env.NODE_ENV === "Docker") {
   mongoURL = "mongodb://mongo:27017";
 } else {
-  mongoURL = "mongodb://localhost:27017";
+  mongoURL = "mongodb://121.0.0.1:27017";
 }
 
 const dbName = "quirknotes";
